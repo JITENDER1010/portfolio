@@ -1,0 +1,37 @@
+
+.button1{
+width: fit-content;
+ border: none;
+ padding: 0.8rem 2.3rem;
+ text-align: center;
+ /* transition: 4s; */
+ cursor:pointer;
+ color: white;
+ background-color: #e84949;
+ font-size: 18px;
+ position: relative;
+ z-index: 1;
+ box-shadow: 5px 5px 7px 0px #0000003f;
+}
+.button1::before{
+    content: "";
+ background-color: #fff;
+ /* color: black; */
+ position: absolute;
+ top:0px;
+ right: 0;
+ left: 0;
+ bottom: 0;
+transform: scaleX(0);
+transform-origin: left;
+transition: all 0.8s;
+z-index: -1;
+}
+
+.button1:hover::before{
+    transform: scaleX(1);
+}
+.button1:hover{
+    border: solid 3px #e84949;
+    color:black;
+}    

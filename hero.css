@@ -1,0 +1,145 @@
+.hero-section{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 5rem;
+    margin: 4rem auto;
+    padding: 0 1rem;
+    padding-bottom: 8rem;
+}
+ /* hero section left */
+.faded-text{
+    user-select: none;
+    font-size: 7em;
+    color: rgb(231, 231, 231);
+    bottom: -16%;
+    left: -5%;
+    font-weight: bold;
+    transition: all 3s;
+    position: absolute;
+}
+.hero-section-left{
+    display: flex;
+    flex-direction: column;
+     justify-content: center;
+   
+    gap: 2rem; 
+
+}
+.hero-section-heading{
+    font-size: 35px;
+    color: #343d68;
+    font-weight: 500;
+}
+.hero-section-subheading{
+    font-size: 45px;
+    line-height: 45px;
+}
+.role{
+    color:#4e45d5;
+    font-weight: 800;
+}
+.hero-section-description{
+    margin-top: 1rem;
+    width: 70%;
+    font-weight: 500;
+}
+/* hero section right */
+.hero-section-right{
+    position: relative;
+
+}
+.absolute{
+    position: absolute;
+}
+.user-image{
+    padding: 2.5rem;
+    filter: grayscale(1);
+    transition: all 1s; 
+    animation: scaleimg 5s linear infinite;
+    z-index: 1;
+}
+.user-image img{
+    z-index:-9;
+}
+@keyframes scaleimg{
+0%{
+filter: grayscale(0);
+transform: scale(1);
+}
+50%{
+ transform: scale(1.1);
+ filter: grayscale(1);
+ box-shadow: 3px 3px 10px black;
+}
+100%{
+transform: scale(1);
+filter: grayscale(0);
+}
+}
+.icon-dots{
+    z-index: 9;
+   bottom: -1rem;
+   right: 0;
+   animation: dotanimation  5s infinite;
+}
+@keyframes dotanimation{
+    0%{
+        transform:translateY(0px); 
+    }
+    50%{
+        transform: translateY(-15px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+.icon-cube{
+    z-index: 9;
+   top: -0.8em;
+   right: 1em;
+   animation: cuberotate 3s  infinite;
+}
+@keyframes cuberotate{
+ 0%{
+    transform: rotateY(0deg) translateY(0px); 
+ }
+ 50%{
+    transform: rotateY(180deg) translateY(-12px); 
+ }
+ 100%{
+    transform: rotateY(360deg) translateY(0px); 
+ }
+}
+.icon-circle{
+    z-index: 9;
+    left:0;
+    bottom: 0;
+    
+}
+.icon-zigzag{
+    z-index: 9;
+    top: 1.5em;
+    left: -0.3em;
+    animation: ziganimation 5s ease-in infinite;
+}
+@keyframes ziganimation{
+    50%{
+        left: 5%;
+        top: 2%;
+    }
+}
+.icon-plus{
+    z-index: 9;
+    top: -0.8rem;
+    left: 50%;
+    animation: plusanimation 5s ease-in infinite;
+}
+@keyframes plusanimation{
+    50%{
+        left: 48%;
+        top: 3%;
+    }
+}
